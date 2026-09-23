@@ -16,6 +16,7 @@ import java.util.concurrent.Executors
 
 class MainActivity:ComponentActivity(){
  override fun onCreate(b:Bundle?){super.onCreate(b);setContent{App()}}
+ @OptIn(ExperimentalMaterial3Api::class)
  @Composable fun App(){
   var url by remember{mutableStateOf("http://127.0.0.1:8787")}
   var response by remember{mutableStateOf("Connecting…")}
